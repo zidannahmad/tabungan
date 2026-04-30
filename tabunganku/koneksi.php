@@ -1,16 +1,37 @@
 <?php
 date_default_timezone_set('Asia/Bangkok');
 
-$conn = mysqli_connect('localhost', 'root', '', '');
+$defaultConfig = [
+    'db_host' => getenv('DB_HOST') ?: 'localhost',
+    'db_name' => getenv('DB_NAME') ?: 'tabunganku',
+    'db_user' => getenv('DB_USER') ?: 'root',
+    'db_pass' => getenv('DB_PASS') ?: '',
+    'db_port' => (int) (getenv('DB_PORT') ?: 3306),
+];
+
+$configFile = __DIR__ . '/config.php';
+
+if (file_exists($configFile)) {
+    $fileConfig = require $configFile;
+
+    if (is_array($fileConfig)) {
+        $defaultConfig = array_merge($defaultConfig, $fileConfig);
+    }
+}
+
+$conn = mysqli_connect(
+    $defaultConfig['db_host'],
+    $defaultConfig['db_user'],
+    $defaultConfig['db_pass'],
+    $defaultConfig['db_name'],
+    $defaultConfig['db_port']
+);
 
 if (!$conn) {
     die('Koneksi gagal: ' . mysqli_connect_error());
 }
 
 mysqli_set_charset($conn, 'utf8mb4');
-
-mysqli_query($conn, "CREATE DATABASE IF NOT EXISTS tabunganku");
-mysqli_select_db($conn, 'tabunganku');
 
 mysqli_query(
     $conn,

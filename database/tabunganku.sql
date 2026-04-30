@@ -1,6 +1,3 @@
-CREATE DATABASE IF NOT EXISTS tabunganku;
-USE tabunganku;
-
 CREATE TABLE IF NOT EXISTS tabungan (
     id INT AUTO_INCREMENT PRIMARY KEY,
     tanggal DATE NOT NULL,
