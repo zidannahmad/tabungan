@@ -1,0 +1,26 @@
+{
+  "name": "Tabunganku",
+  "short_name": "Tabungan",
+  "description": "Aplikasi tabungan pribadi untuk mencatat target dan transaksi harian.",
+  "start_url": "./login.php",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0c0e17",
+  "theme_color": "#0052ff",
+  "lang": "id-ID",
+  "icons": [
+    {
+      "src": "assets/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

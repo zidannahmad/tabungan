@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Offline | Tabunganku</title>
+    <meta name="theme-color" content="#0052ff">
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            background:
+                radial-gradient(circle at top, rgba(0, 82, 255, 0.24), transparent 35%),
+                linear-gradient(180deg, #0c0e17 0%, #11131c 100%);
+            color: #e5e7eb;
+        }
+
+        .card {
+            width: min(100%, 460px);
+            padding: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            background: rgba(17, 19, 28, 0.92);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 28px;
+        }
+
+        p {
+            margin: 0 0 10px;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 12px;
+            color: #ffffff;
+            background: #0052ff;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 999px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <h1>Koneksi sedang offline</h1>
+        <p>Tabunganku masih bisa dibuka dari cache untuk halaman yang pernah diakses.</p>
+        <p>Sambungkan internet lagi lalu muat ulang untuk mengambil data terbaru.</p>
+        <a href="./index.php">Coba lagi</a>
+    </main>
+</body>
+</html>
